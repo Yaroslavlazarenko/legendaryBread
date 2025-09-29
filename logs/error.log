@@ -1,0 +1,32 @@
+2025-09-29 16:29:56.011 | ERROR    | app.flows.client:finalize_order:192 - Ошибка при оформлении заказа ORD-1759152596-789: 1 validation error for SalesOrderRow
+phone
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_type
+2025-09-29 18:59:39.922 | ERROR    | app.flows.client:finalize_order:194 - Ошибка при оформлении заказа ORD-1759161579-789: 1 validation error for SalesOrderRow
+order_id
+  Field required [type=missing, input_value={'id': 'ORD-1759161579-78..., 'total_amount': 375.0}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-09-29 19:00:48.511 | ERROR    | app.flows.client:finalize_order:194 - Ошибка при оформлении заказа ORD-1759161648-789: 1 validation error for SalesOrderRow
+order_id
+  Field required [type=missing, input_value={'id': 'ORD-1759161648-78..., 'total_amount': 375.0}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-09-29 19:01:35.682 | ERROR    | app.flows.client:finalize_order:194 - Ошибка при оформлении заказа ORD-1759161695-789: 1 validation error for SalesOrderRow
+order_id
+  Field required [type=missing, input_value={'id': 'ORD-1759161695-78..., 'total_amount': 375.0}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-09-29 19:08:22.889 | ERROR    | app.flows.client:finalize_order:194 - Ошибка при оформлении заказа ORD-1759162102-789: 1 validation error for SalesOrderRow
+order_id
+  Field required [type=missing, input_value={'id': 'ORD-1759162102-78..., 'total_amount': 375.0}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-09-29 19:09:00.272 | ERROR    | app.flows.client:finalize_order:194 - Ошибка при оформлении заказа ORD-1759162140-789: 1 validation error for SalesOrderRow
+order_id
+  Field required [type=missing, input_value={'id': 'ORD-1759162140-78..., 'total_amount': 375.0}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-09-29 19:37:36.491 | ERROR    | app.flows.registration:confirm_registration:115 - Ошибка при подтверждении регистрации для user_id 123: 2 validation errors for User
+user_id
+  Field required [type=missing, input_value={'id': 123, 'name': 'Те...ole.PENDING: 'pending'>}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+user_name
+  Field required [type=missing, input_value={'id': 123, 'name': 'Те...ole.PENDING: 'pending'>}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-09-29 20:08:20.809 | ERROR    | app.flows.registration:confirm_registration:115 - Ошибка при подтверждении регистрации для user_id 964804554: Chat not found

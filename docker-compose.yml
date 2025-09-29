@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  telegram_bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: my-telegram-bot-instance
+    # Передает все переменные окружения из .env файла в контейнер.
+    # Docker Compose автоматически ищет .env файл в той же директории, что и docker-compose.yml
+    env_file:
+      - .env
+    # Указывает, какие файлы из хостовой системы монтировать в контейнер.
+    # Здесь мы монтируем credentials.json, чтобы он был доступен внутри контейнера,
+    # не будучи частью образа (для большей безопасности, если credentials.json часто меняется)
+    # или если вы не хотите, чтобы он был "запечен" в образ.
+    # ВАЖНО: Убедитесь, что credentials.json находится в корневой директории вашего проекта.
+    volumes:
+      - ./credentials.json:/app/credentials.json:ro
+    # Можно добавить restart policy, чтобы бот автоматически перезапускался после сбоев
+    restart: unless-stopped
+    # Если вы хотите использовать webhook, а не polling, вам потребуется
+    # открыть порт и настроить WEBHOOK_URL в .env
+    # ports:
+    #   - "80:80" # Пример для webhook на порту 80

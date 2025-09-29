@@ -1,2 +1,8 @@
-config/.env
+.env
 venv/
+credentials.json
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
